@@ -3,6 +3,6 @@ __pycache__/
 dist/
 *.pkl
 create.sh
-varsave.egg-info
+varsave.egg-info/
 pyproject.toml
-varsave/__pycache__
+varsave/__pycache__/
