@@ -1,0 +1,18 @@
+[project]
+name = "varsave"
+version = "0.1.1"
+description = "Runtime snapshot and restore system using pickling"
+authors = [
+    { name="Van Opdorp", email="dontwanttogiveyoumeemail@notanemail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "GPL-3.0" }
+
+[project.urls]
+Homepage = "https://github.com/vanopdorp/VarSave"
+Source = "https://github.com/vanopdorp/VarSave"
+
+[build-system]
+requires = ["setuptools", "wheel","dill"]
+build-backend = "setuptools.build_meta"
