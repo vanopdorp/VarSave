@@ -27,21 +27,18 @@ def save_everything():
     caller_globals = frame.f_globals
     caller_locals = frame.f_locals
 
-    # 1. Save ALL globals (pickle can handle it)
     globals_copy = {}
     for k, v in caller_globals.items():
         if not k.startswith("__"):
             globals_copy[k] = v
     data["globals"] = globals_copy
 
-    # 2. Save ALL locals
     locals_copy = {}
     for k, v in caller_locals.items():
         if not k.startswith("__"):
             locals_copy[k] = v
     data["locals"] = locals_copy
 
-    # 3. Save object attributes
     objects = {}
     for name, value in {**globals_copy, **locals_copy}.items():
         if is_instance(value):
@@ -54,11 +51,9 @@ def load_everything(data):
     frame = get_real_caller()
     caller_globals = frame.f_globals
 
-    # 1. Restore globals
     for k, v in data.get("globals", {}).items():
         caller_globals[k] = v
 
-    # 2. Restore object attributes
     for name, attrs in data.get("objects", {}).items():
         if name in caller_globals:
             obj = caller_globals[name]
