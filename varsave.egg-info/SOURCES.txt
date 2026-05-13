@@ -5,4 +5,5 @@ varsave/__main__.py
 varsave.egg-info/PKG-INFO
 varsave.egg-info/SOURCES.txt
 varsave.egg-info/dependency_links.txt
+varsave.egg-info/requires.txt
 varsave.egg-info/top_level.txt
