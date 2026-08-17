@@ -88,14 +88,7 @@ This function injects variables back into the caller’s global namespace and re
 ---
 
 ## Installation
-
-Install VarSave from PyPI:
-
-```bash
-pip install varsave
-```
-
-VarSave automatically installs `dill` as a dependency.
+Figure it out by yourself this project is no longer maintained.
 
 ---
 
